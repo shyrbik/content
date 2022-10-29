@@ -73,12 +73,10 @@ class Rectangle {
 
 class Square extends Rectangle {
   constructor(length) {
-    this.height; // ReferenceError, super needs to be called first!
-
     // Here, it calls the parent class's constructor with lengths
     // provided for the Rectangle's width and height
     super(length, length);
-
+    this.height; // ReferenceError, super needs to be called first!   
     // Note: In derived classes, super() must be called before you
     // can use 'this'. Leaving this out will cause a reference error.
     this.name = 'Square';
